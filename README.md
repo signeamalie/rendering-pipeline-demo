@@ -1,9 +1,14 @@
 **Fordybelsesspor 2 - Rendering Pipeline Demo**
 
--- 
+__ 
+
 
 Denne demo visualiserer forskellen mellem en reflow-baseret animation og en GPU-optimeret compositing-animation.
 Den bygger direkte videre på den teoretiske forståelse fra Fordybelsesspor 1 rapporten om browserens rendering pipeline.
+
+
+***Kan tilgås på: rendering-pipeline-demo.signejensen.dk***
+
 
 **Oversigt over mappeindhold**
 - index.html - struktur og UI
