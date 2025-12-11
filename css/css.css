@@ -1,0 +1,63 @@
+/* 
+  dette demo viser forskellen mellem to måder at animere på:
+
+  1) reflow-baseret animation (dårlig performance)
+     - ændrer elementets width → udløser layout (reflow)
+     - browseren skal genberegne placeringer i layoutet
+     - tungt for CPU og kan skabe hak i UI
+
+  2) compositing-baseret animation (god performance)
+     - bruger transform → lægges på eget GPU-lag
+     - ingen reflow eller repaint, kun compositing
+     - giver glatte, stabile animationer
+
+  pointen er at vise, hvordan et enkelt CSS-valg kan være enten “dyrt”
+  eller “billigt” for browserens rendering pipeline
+*/
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, sans-serif;
+  padding: 2rem 1rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.demo {
+  text-align: left;
+}
+
+.demo p {
+  margin-bottom: 1rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  margin: 20px 0;
+  transition: all 0.4s ease;
+}
+
+/* version A – udløser reflow */
+.box-reflow.animated {
+  width: 300px;
+}
+
+/* version B – optimal GPU animation */
+.box-composite {
+  will-change: transform;
+}
+
+.box-composite.animated {
+  transform: translateX(200px);
+}
