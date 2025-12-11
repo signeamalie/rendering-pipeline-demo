@@ -7,7 +7,7 @@ Denne demo visualiserer forskellen mellem en reflow-baseret animation og en GPU-
 Den bygger direkte videre på den teoretiske forståelse fra Fordybelsesspor 1 rapporten om browserens rendering pipeline.
 
 
-***Kan tilgås på: rendering-pipeline-demo.signejensen.dk***
+***Kan tilgås på: https://rendering-pipeline-demo.signejensen.dk***
 
 
 **Oversigt over mappeindhold**
